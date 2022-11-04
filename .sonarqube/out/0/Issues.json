@@ -73,6 +73,27 @@
           "properties": {
             "warningLevel": 1
           }
+        },
+        {
+          "ruleId": "S5445",
+          "level": "warning",
+          "message": "'Path.GetTempFileName()' is insecure. Use 'Path.GetRandomFileName()' instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/thamires.silva/Desktop/poc-webapi/Controllers/WeatherForecastController.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 24,
+                  "endLine": 46,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
         }
       ],
       "rules": {
@@ -108,6 +129,22 @@
               "TestSourceScope",
               "SonarWay",
               "Unnecessary"
+            ]
+          }
+        },
+        "S5445": {
+          "id": "S5445",
+          "shortDescription": "Insecure temporary file creation methods should not be used",
+          "fullDescription": "Creating temporary files using insecure methods exposes the application to race conditions on filenames: a malicious user can try to create a file with a predictable name before the application does. A successful attack can result in other files being accessed, modified, corrupted or deleted. This risk is even higher if the application run with elevated permissions.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-5445",
+          "properties": {
+            "category": "Critical Vulnerability",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
             ]
           }
         }

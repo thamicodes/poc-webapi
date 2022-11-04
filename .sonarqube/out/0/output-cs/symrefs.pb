@@ -1,4 +1,4 @@
-¹
+ñ
 SC:\Users\thamires.silva\Desktop\poc-webapi\Controllers\WeatherForecastController.cs
  & 6- F
 		% . 3 <
@@ -10,7 +10,11 @@ SC:\Users\thamires.silva\Desktop\poc-webapi\Controllers\WeatherForecastControlle
 
 !! "(
 ## && '' )) 
-$$ && '' ¯
+$$ && '' 
+
+,, (
+.. 00- 5
+00 22 ¯
 5C:\Users\thamires.silva\Desktop\poc-webapi\Program.cs,
     
 
