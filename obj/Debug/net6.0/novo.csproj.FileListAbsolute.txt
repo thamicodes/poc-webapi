@@ -21,3 +21,30 @@
 /Users/thamiresgomessilva/Desktop/novo /obj/Debug/net6.0/novo.pdb
 /Users/thamiresgomessilva/Desktop/novo /obj/Debug/net6.0/novo.genruntimeconfig.cache
 /Users/thamiresgomessilva/Desktop/novo /obj/Debug/net6.0/ref/novo.dll
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\appsettings.json
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\novo.exe
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\novo.deps.json
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\novo.runtimeconfig.json
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\novo.dll
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\novo.pdb
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\thamires.silva\Desktop\poc-webapi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.csproj.AssemblyReference.cache
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.AssemblyInfoInputs.cache
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.AssemblyInfo.cs
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.csproj.CoreCompileInputs.cache
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\scopedcss\bundle\novo.styles.css
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.csproj.CopyComplete
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.dll
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\refint\novo.dll
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.pdb
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\novo.genruntimeconfig.cache
+C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\ref\novo.dll
