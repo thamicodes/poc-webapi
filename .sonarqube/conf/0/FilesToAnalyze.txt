@@ -9,4 +9,3 @@ C:\Users\thamires.silva\Desktop\poc-webapi\appsettings.Development.json
 C:\Users\thamires.silva\Desktop\poc-webapi\appsettings.json
 C:\Users\thamires.silva\Desktop\poc-webapi\.gitignore
 C:\Users\thamires.silva\Desktop\poc-webapi\Properties\launchSettings.json
-C:\Users\thamires.silva\Desktop\poc-webapi\obj\Debug\net6.0\apphost.exe

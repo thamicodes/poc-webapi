@@ -4,21 +4,21 @@ namespace novo.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class FrutasController : ControllerBase
+public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    private readonly ILogger<FrutasController> _logger;
+    private readonly ILogger<WeatherForecastController> _logger;
 
-    public FrutasController(ILogger<FrutasController> logger)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
         _logger = logger;
     }
 
-    [HttpGet(Name = "Frutas")]
+    [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -30,13 +30,14 @@ public class FrutasController : ControllerBase
         .ToArray();
     }
     [HttpGet(Name = "CodeSmell")]
-    public IEnumerable<WeatherForecast> CodeSmell()
+    public IActionResult CodeSmell()
     {
         int target = -5;
         int num = 3;
 
         target = -num;  // Noncompliant; target = -3. Is that really what's meant?
         target = +num; // Noncompliant; target = 3
+
         return Ok(target);
     }
 }
