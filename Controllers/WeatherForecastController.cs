@@ -1,35 +1,28 @@
+using System.Security.Cryptography;
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
+using novo.Util;
 
 namespace novo.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class ExemploController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly ILogger<ExemploController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public ExemploController(ILogger<ExemploController> logger)
     {
         _logger = logger;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
-    {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateTime.Now.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
-    }
-    [HttpGet(Name = "CodeSmell")]
+
+    [HttpGet("c1")]
     public IActionResult CodeSmell()
     {
         int target = -5;
@@ -40,15 +33,49 @@ public class WeatherForecastController : ControllerBase
 
         return Ok(target);
     }
-    [HttpGet(Name = "Vulnerabilidade")]
+    [HttpGet("c2")]
+    public IActionResult CodeSmell2()
+    {
+        var fruitBasket = new List<Fruta>();
+        fruitBasket.Add(new Laranja());
+        fruitBasket.Add(new Laranja());
+        fruitBasket.Add(new Uva());  // uncommenting this line will make both foreach below throw an InvalidCastException
+
+        foreach (Fruta fruit in fruitBasket)
+        {
+            var orange = (Laranja)fruit; // This "explicit" conversion is hidden within the foreach loop below
+
+        }
+
+        foreach (Laranja orange in fruitBasket) // Noncompliant
+        {
+
+        }
+        return Ok(fruitBasket);
+    }
+    [HttpGet("v1")]
     public IActionResult Vulnerabilidade()
     {
-        var tempPath = Path.GetTempFileName();  // Noncompliant
-
+        var tempPath = Path.GetTempFileName();
         using (var writer = new StreamWriter(tempPath))
         {
-            writer.WriteLine("content");
+            writer.WriteLine("conteúdo");
         }
         return Ok();
     }
+    [HttpGet("v2")]
+    public IActionResult Vulnerabilidade2()
+    {
+        string senha = "123";
+        var salt = Encoding.UTF8.GetBytes("Hardcoded salt");
+        var fromHardcoded = new Rfc2898DeriveBytes(senha, salt);
+        salt = Encoding.UTF8.GetBytes(senha);
+        var fromPassword = new Rfc2898DeriveBytes(senha, salt);
+
+        var shortSalt = new byte[8];
+        RandomNumberGenerator.Create().GetBytes(shortSalt);
+        var fromShort = new Rfc2898DeriveBytes(senha, shortSalt);
+        return Ok(fromHardcoded);
+    }
+
 }
